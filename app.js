@@ -2,11 +2,12 @@ const express = require('express');
 const bodyParser = require('body-parser');
 const app = express();
 app.use(bodyParser.json());
-app.use(cors());
 const path = require('path');
 const db = require('./db')
 const collection = "todo";
 const cors = require('cors');
+app.use(cors());
+
 
 app.get('/', (req, res) => {
     res.sendFile(path.join(__dirname, 'index.html'))

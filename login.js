@@ -57,7 +57,8 @@ login.post('/userVal', (req, res) => {
             if (documents == null) {
                 documents = 'Incorrect Username or Password';
             }
-            res.json(documents);
+            res.status(200);
+            res.json({message: 'Login Successfully'});
         }
     });
 });
